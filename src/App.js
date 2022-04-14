@@ -1,4 +1,4 @@
-import { Router, Routes, Route } from "react-router-dom"
+import { Router, Routes, Route, Switch } from "react-router-dom"
 import './App.css';
 import Menu from './Menu.js';
 import Home from './Home.js';
@@ -10,10 +10,10 @@ function App() {
     <div>
           <Menu/>
       <Router basename="/videoa">
-         <Routes>
+         <Switch>
             <Route path="/" exact element={ <Home/> } />
             <Route path="/contact" element={ <Contact/> } />
-         </Routes>
+         </Switch>
       </Router>
 
     </div>
